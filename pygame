@@ -1,0 +1,33 @@
+import pygame
+
+# Initialize pygame
+pygame.init()
+
+# Set screen size
+screen = pygame.display.set_mode((800, 600))
+
+# Set title
+pygame.display.set_caption("Snake")
+
+# Set game variables
+done = False
+clock = pygame.time.Clock()
+
+# Game loop
+while not done:
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+
+    # Clear screen
+    screen.fill((0, 0, 0))
+
+    # Update screen
+    pygame.display.flip()
+
+    # Limit frames per second
+    clock.tick(60)
+
+# Quit game
+pygame.quit()
